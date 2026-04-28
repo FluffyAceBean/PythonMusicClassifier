@@ -159,4 +159,10 @@ However, since this project is under the [GPL-3.0 license](https://www.gnu.org/l
 
 Please contact me or open an issue if needed.
 
+### Important notice
+
+This project is vibe-coded as of 28 april 2026. I don't like that it is the case, but the complexity of the program and my non-knowledge of Python made me use AI. Future revisions should decrease the use of A.I. in the code to human-made code. Code starting with `# AI+` and ending with `# AI-` delimit section where vibe-coded code is used.
+
+PLEASE DO NOT USE THIS IN A SECURE ENVIRONMENT.
+
 `SPDX-License-Identifier: GPL-3.0 AND LicenseRef-OQL-1.2`

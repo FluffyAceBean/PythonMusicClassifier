@@ -5,6 +5,7 @@
 #   - OQL v1.2
 # See README.md
 #
+# AI+
 # -*- coding: utf-8 -*-
 
 import os
@@ -181,7 +182,7 @@ def move_folder_robust(src, dst):
         return
     except Exception as e:
         if "cross-device" not in str(e).lower() and not isinstance(e, OSError):
-            raise  # Re-raise non-cross-device errors immediately
+            raise
 
     # Cross-device move: Copy then verify then delete
     try:
@@ -198,9 +199,6 @@ def move_folder_robust(src, dst):
     try:
         shutil.rmtree(str(src))
     except Exception as delete_err:
-        # CRITICAL: Restore dst if delete fails? Or just warn?
-        # For safety, we could restore from dst back to src, but that's complex.
-        # Better to leave both and warn user.
         raise RuntimeError(
             f"Copy succeeded but source deletion failed: {delete_err}. "
             f"Manual cleanup required. Both {src} and {dst} exist."
@@ -404,3 +402,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# AI-
